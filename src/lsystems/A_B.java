@@ -1,11 +1,11 @@
 package lsystems;
 
-public class A_BC extends LRule
+public class A_B extends LRule
 {
 	private char match;
-	private char[] body = {'B','C'};
+	private char[] body = {'B'};
 	
-	public A_BC()
+	public A_B()
 	{
 		match = 'A';
 		
@@ -20,4 +20,5 @@ public class A_BC extends LRule
 	{
 		return body;
 	}
+	
 }

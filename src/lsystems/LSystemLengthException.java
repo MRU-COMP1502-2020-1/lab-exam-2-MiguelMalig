@@ -2,14 +2,15 @@ package lsystems;
 
 public class LSystemLengthException extends Exception
 {
-	public LSystemLengthException(String message)
+	private char symbol;
+	public LSystemLengthException(char symbol)
 	{
-		super(message);
+		this.symbol = symbol;
 		
 	}
 	
-	public String getSymbol()
+	public char getSymbol()
 	{
-		return "Complete";
+		return symbol;
 	}
 }
