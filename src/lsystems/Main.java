@@ -8,29 +8,37 @@ public class Main {
 	public static void main(String[] args) {
 
 		LRule r1 = new A_BC();
-		LRule r2 = new B_A();
-		LRule r3 = new C_B();
+//		LRule r2 = new B_A();
+//		LRule r3 = new C_B();
+//		LRule rTest = new A_A();
 		
 		Set<LRule> rules = new HashSet<>();
 		rules.add(r1);
-		rules.add(r2);
-		rules.add(r3);
+//		rules.add(r2);
+//		rules.add(r3);
+//		rules.add(rTest);
 
 		char[] lineChar = {'A'};
 		LLine line = new LLine(lineChar, rules);
 
 		System.out.println("Step 0:" + line);
-		try {
-			for (int i = 1; i <= 10; i++) {
+		try 
+		{
+			for (int i = 1; i <= 10; i++) 
+			{
 
 				line.process();
 
 				System.out.println("Step " + i + ":" + line);
 			}
-		} catch (LSystemSymbolException e) {
+		} 
+		catch (LSystemSymbolException e) 
+		{
 			System.err.println("Not able to process LSystem line due to " + e.getSymbol());
 			e.printStackTrace();
-		} catch (LSystemLengthException e) {
+		} 
+		catch (LSystemLengthException e) 
+		{
 			System.err.println("Not able to process LSystem due to no symbols");
 			e.printStackTrace();
 		}
