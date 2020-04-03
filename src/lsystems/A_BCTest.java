@@ -4,19 +4,12 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class A_ATest {
+public class A_BCTest {
 
 	@Test
 	public void testGetMatch() 
 	{
-		A_A a = new A_A();
+		A_BC a = new A_BC();
 		assertEquals("GetMatchTest", 'A', a.getMatch() );
 	}
-	@Test
-	public void testGetBody() 
-	{
-		A_A a = new A_A();
-		assertEquals('A', a.getBody().toString());
-	}
-
 }
