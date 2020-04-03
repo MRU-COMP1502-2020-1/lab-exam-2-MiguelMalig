@@ -11,5 +11,12 @@ public class A_QTest {
 		A_Q a = new A_Q();
 		assertEquals("GetMatchTest", 'A', a.getMatch() );
 	}
+	public void testGetBody() 
+	{
+		A_Q a = new A_Q();
+		char [] list = a.getBody();
+		
+		assertEquals('A', list[0]);
+	}
 
 }

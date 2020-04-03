@@ -16,7 +16,8 @@ public class A_ATest {
 	public void testGetBody() 
 	{
 		A_A a = new A_A();
-		assertEquals('A', a.getBody().toString());
+		char [] list = a.getBody();
+		assertEquals('A', list[0]);
 	}
 
 }

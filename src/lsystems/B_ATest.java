@@ -12,6 +12,13 @@ public class B_ATest {
 		B_A a = new B_A();
 		assertEquals("GetMatchTest", 'B', a.getMatch() );
 	}
+	public void testGetBody() 
+	{
+		B_A a = new B_A();
+		char [] list = a.getBody();
+		
+		assertEquals('A', list[0]);
+	}
 
 
 }
