@@ -2,13 +2,14 @@ package lsystems;
 
 public class LSystemSymbolException extends Exception
 {
-	public LSystemSymbolException(String message)
+	char c;
+	public LSystemSymbolException(char c)
 	{
-		super(message);
+		this.c = c;
 	}
 	
-	public String getSymbol()
+	public char getSymbol()
 	{
-		return null;
+		return c;
 	}
 }

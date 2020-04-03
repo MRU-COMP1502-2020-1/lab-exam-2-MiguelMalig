@@ -20,11 +20,11 @@ public class LLine {
 	public void process() throws LSystemSymbolException, LSystemLengthException 
 	{
 		
-		
 		if(line.length == 0)
-		{
-			throw new LSystemSymbolException();
-		}
+			{
+				throw new LSystemLengthException();
+			}
+		
 		list.clear();
 		for (int i = 0; i< line.length; i++)
 		{
@@ -34,6 +34,7 @@ public class LLine {
 				{
 					for(char c: rule.getBody())
 					{
+						if(c == 'Q') throw new LSystemSymbolException(c);
 						list.add(c);
 					}
 				}
